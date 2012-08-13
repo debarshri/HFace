@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
+  <servlet>
+    <servlet-name>ColumnFamilyFilterServlet</servlet-name>
+    <servlet-class>org.hface.hfaceController.ColumnFamilyFilterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserLogin</servlet-name>
+    <servlet-class>org.hface.hfaceController.UserLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Home</servlet-name>
+    <servlet-class>org.hface.hfaceController.Home</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ValueFilterServlet</servlet-name>
+    <servlet-class>org.hface.hfaceController.ValueFilterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SubStringFilterServlet</servlet-name>
+    <servlet-class>org.hface.hfaceController.SubStringFilterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RowFilterServlet</servlet-name>
+    <servlet-class>org.hface.hfaceController.RowFilterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DbPolling</servlet-name>
+    <servlet-class>org.hface.hfaceController.DbPolling</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PollTest</servlet-name>
+    <servlet-class>org.hface.hfaceController.PollTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLogin</servlet-name>
+    <url-pattern>/UserLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Home</servlet-name>
+    <url-pattern>/Home</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ValueFilterServlet</servlet-name>
+    <url-pattern>/ValueFilterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RowFilterServlet</servlet-name>
+    <url-pattern>/RowFilterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ColumnFamilyFilterServlet</servlet-name>
+    <url-pattern>/ColumnFamilyFilterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DbPolling</servlet-name>
+    <url-pattern>/DbPolling</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PollTest</servlet-name>
+    <url-pattern>/PollTest</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <login-config>
+    <auth-method>BASIC</auth-method>
+  </login-config>
+  <servlet>
+    <servlet-name>CreateRestTable</servlet-name>
+    <servlet-class>org.hface.hfaceController.CreateRestTable</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateRestTable</servlet-name>
+    <url-pattern>/CreateRestTable</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>deleteRestTable</servlet-name>
+    <servlet-class>org.hface.hfaceController.deleteRestTable</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteRestTable</servlet-name>
+    <url-pattern>/deleteRestTable</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BulkLoaderHBaseHDFS</servlet-name>
+    <servlet-class>org.hface.hfaceController.BulkLoaderHBaseHDFS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BulkLoaderHBaseHDFS</servlet-name>
+    <url-pattern>/BulkLoaderHBaseHDFS</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CheckExistance</servlet-name>
+    <servlet-class>org.hface.hfaceController.CheckExistance</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckExistance</servlet-name>
+    <url-pattern>/CheckExistance</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  
+   
+    <servlet-name>RestCommit</servlet-name>
+    <servlet-class>org.hface.hfaceController.RestCommit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RestCommit</servlet-name>
+    <url-pattern>/RestCommit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+ 
+   
+    <servlet-name>RestGet</servlet-name>
+    <servlet-class>org.hface.hfaceController.RestGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RestGet</servlet-name>
+    <url-pattern>/RestGet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  
+  
+    <servlet-name>RestPut</servlet-name>
+    <servlet-class>org.hface.hfaceController.RestPut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RestPut</servlet-name>
+    <url-pattern>/RestPut</url-pattern>
+  </servlet-mapping>
+  <servlet>
+   
+    
+    <servlet-name>DataCleanser</servlet-name>
+    <servlet-class>org.hface.mapreduce.DataCleanser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DataCleanser</servlet-name>
+    <url-pattern>/DataCleanser</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    
+ 
+    <servlet-name>Parser</servlet-name>
+    <servlet-class>org.hface.sql.Parser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Parser</servlet-name>
+    <url-pattern>/Parser</url-pattern>
+  </servlet-mapping>
+ 
+
+</web-app>

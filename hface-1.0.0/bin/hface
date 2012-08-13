@@ -1,0 +1,62 @@
+#!/bin/bash
+
+bin=`dirname "$0"`
+bin=`cd "$bin">/dev/null; pwd`
+this="${BASH_SOURCE-$0}"
+while [ -h "$this" ]; do
+  ls=`ls -ld "$this"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '.*/.*' > /dev/null; then
+    this="$link"
+  else
+    this=`dirname "$this"`/"$link"
+  fi
+done
+
+# convert relative path to absolute path
+bin=`dirname "$this"`
+script=`basename "$this"`
+bin=`cd "$bin">/dev/null; pwd`
+this="$bin/$script"
+
+# actual directory
+if [ -z "$HFACE_HOME" ]; then
+  export HFACE_HOME=`dirname "$this"`/..
+fi
+
+if [ $# = 0 ]; then
+  echo ""
+  echo ""
+  echo "Usage: hface <args>"
+  echo "Available options:"
+  echo "  start                   Creates user table and starts the server"
+  echo "  createUser              Only Creates User Table"
+  echo "  startServer             Starts the Server"
+  echo "  serverAsDaemon          Starts server as a background process"
+  echo "  importUserDetail        Import User detail as a flat file"
+  echo "  deleteUser              Deletes User table from HBase"
+  echo ""
+  exit 1
+fi
+
+# get arguments
+CMD=$1
+clear
+if [ "$CMD" = "start" ] ; then
+echo $HFACE_HOME/hface-1.0.0-runnable.jar
+ echo "Creating user table..."
+ java -jar $HFACE_HOME/hface-1.0.0-runnable.jar CreateUser
+ echo "User table created..."
+ echo "Starting server..."
+cd $HFACE_HOME
+ java -jar hface-server.jar 
+elif [ "$CMD" = "createUser" ] ; then
+ java -jar $HFACE_HOME/hface-1.0.0-runnable.jar CreateUser
+elif [ "$CMD" = "startServer" ] ; then
+ java -jar $HFACE_HOME/hface-server.jar
+  fi
+	   
+
+ 
+
+

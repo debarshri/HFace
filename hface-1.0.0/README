@@ -1,0 +1,14 @@
+Step1: Download the tar.gz file
+
+Step2: Un-tar the gz file
+
+Step3: export HBASE_HOME
+
+Step4: cd ~/hface-1.0.0
+
+Step5: bin/hface start
+
+Step6: Go to http://host-name:9090/
+
+Step7: Enjoy!
+
